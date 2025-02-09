@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 
 const Table = ({PlayerData}) => {
-  console.log(PlayerData);
-  // const [data,setData] = useState(null);
-  // setData(PlayerData);
-  // console.log(data);
+  // console.log(PlayerData);
+ 
   return (
     <div>
       
-      <table className='text-center ms-20'>
+      <table className='text-center lg:ms-20'>
         <thead>
           <tr className='border border-1 border-black bg-blue-300'>
             <th className="border border-gray-300 px-4 py-2 ">ID</th>

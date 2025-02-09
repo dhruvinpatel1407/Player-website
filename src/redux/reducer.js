@@ -4,12 +4,12 @@ export const initState = {
   PlayerData: [],
   Bench : [],
   AddData : [],
-  
+  contactResponse: [],
   
 };
 
 
-console.log(initState);
+// console.log(initState);
 
 
 
@@ -22,6 +22,11 @@ const reducer = (state = initState,action) => {
       return {...state, AddData : [...state.AddData, newUser]} 
     case actions.DELETE_PLAYER : 
     return {...state, AddData: state.AddData.filter((_, i) => i !== action.payload),}
+    case actions.SAVE_CONTACT_RESPONSE:
+      return {
+        ...state,
+        contactResponses: [...state.contactResponse, action.payload], // Store multiple responses
+      };
     default:
       return state;
   }

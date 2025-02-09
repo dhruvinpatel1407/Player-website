@@ -3,3 +3,4 @@ export const ADD_PLAYER = "ADD_PLAYER";
 export const DELETE_PLAYER = "DELETE_PLAYER";
 export const INC = "INC";
 export const DEC = "DEC";
+export const SAVE_CONTACT_RESPONSE = "SAVE_CONTACT_RESPONSE";
