@@ -1,7 +1,7 @@
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
 import { afterEach, it, expect } from "vitest";
-import reducer, { initState } from "../redux/reducer";
+import reducer from "../redux/reducer";
 import { Provider } from "react-redux";
 import PopularPlayer from "../pages/popular player";
 import {thunk} from "redux-thunk";

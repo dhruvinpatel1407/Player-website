@@ -5,7 +5,7 @@ export const GetPlayerData = () => {
   return async (dispatch) => {
     try {
       const response = await axios.get(
-          // "https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/35878/team/9",
+           "https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/35878/team/9",
         {
           headers: {
             "x-rapidapi-key":

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import  { useState } from "react";
+import { useDispatch } from "react-redux";
 import { GetAddedData } from "../../redux/actions";
 import { v4 as uuidv4 } from "uuid";
 
@@ -9,7 +9,7 @@ function Form() {
   const [teamname, setTeamName] = useState("");
   const [id, setId] = useState("");
   const [score , setScore] = useState("")
-  const AddData = useSelector((state) => state.AddData);
+  
   const dispatch = useDispatch();
 
   const handlechange = (e) => {
@@ -40,79 +40,74 @@ function Form() {
 
   return (
     <>
-      <form
-        onSubmit={handlesubmit}
-        className="bg-white shadow-lg rounded-lg p-6 max-w-lg mx-auto space-y-4"
-      >
-        <h2 className="text-2xl font-bold text-center text-gray-900">
-          Add Player Details
-        </h2>
-        <div>
-          <label
-            htmlFor="playerName"
-            className="block text-gray-800 font-medium"
-          >
-            Player Name:
-          </label>
-          <input
-            type="text"
-            id="playerName"
-            name="playerName"
-            className="w-full p-3 border border-gray-400 rounded-lg mt-1"
-            onChange={handlechange}
-            value={name}
-            required
-          />
-        </div>
-       <div>
-          <label htmlFor="score" className="block text-gray-800 font-medium">
-            Score:
-          </label>
-          <input
-            type="text"
-            id="score"
-            name="score"
-            className="w-full p-3 border border-gray-400 rounded-lg mt-1"
-            onChange={handlechange}
-            value={score}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="teamName" className="block text-gray-800 font-medium">
-            Team Name:
-          </label>
-          <input
-            type="text"
-            id="teamName"
-            name="teamName"
-            className="w-full p-3 border border-gray-400 rounded-lg mt-1"
-            onChange={handlechange}
-            value={teamname}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="position" className="block text-gray-800 font-medium">
-            Position:
-          </label>
-          <input
-            type="text"
-            id="position"
-            name="position"
-            className="w-full p-3 border border-gray-400 rounded-lg mt-1"
-            onChange={handlechange}
-            value={position}
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-900"
-        >
-          Submit
-        </button>
-      </form>
+     <form
+  onSubmit={handlesubmit}
+  className="bg-white shadow-lg rounded-lg p-6 max-w-lg mx-auto space-y-4"
+>
+  <h2 className="text-2xl font-bold text-center text-gray-900">
+    Add Player Details
+  </h2>
+
+  <div>
+    <input
+      type="text"
+      id="playerName"
+      name="playerName"
+      placeholder="Player Name"
+      className="w-full p-3 border border-gray-400 rounded-lg mt-1 placeholder-gray-500"
+      onChange={handlechange}
+      value={name}
+      required
+    />
+  </div>
+
+  <div>
+    <input
+      type="text"
+      id="score"
+      name="score"
+      placeholder="Score"
+      className="w-full p-3 border border-gray-400 rounded-lg mt-1 placeholder-gray-500"
+      onChange={handlechange}
+      value={score}
+      required
+    />
+  </div>
+
+  <div>
+    <input
+      type="text"
+      id="teamName"
+      name="teamName"
+      placeholder="Team Name"
+      className="w-full p-3 border border-gray-400 rounded-lg mt-1 placeholder-gray-500"
+      onChange={handlechange}
+      value={teamname}
+      required
+    />
+  </div>
+
+  <div>
+    <input
+      type="text"
+      id="position"
+      name="position"
+      placeholder="Position"
+      className="w-full p-3 border border-gray-400 rounded-lg mt-1 placeholder-gray-500"
+      onChange={handlechange}
+      value={position}
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    className="w-full bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-900"
+  >
+    Submit
+  </button>
+</form>
+
     </>
   );
 }

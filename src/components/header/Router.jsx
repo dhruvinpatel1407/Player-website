@@ -1,4 +1,4 @@
-import React,{ useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from "./navbar";
 import Home from "./../../pages/home-landingpage";
 import About from "./../../pages/about";

@@ -9,17 +9,13 @@ export const initState = {
 };
 
 
-// console.log(initState);
-
-
-
 const reducer = (state = initState,action) => {
   switch(action.type) {
     case actions.GET_PLAYER:
       return { ...state, PlayerData : action.payload.playingXI , Bench : action.payload.bench };
-    case actions.ADD_PLAYER:
+    case actions.ADD_PLAYER:{
       const newUser = {...action.payload}
-      return {...state, AddData : [...state.AddData, newUser]} 
+      return {...state, AddData : [...state.AddData, newUser]} }
     case actions.DELETE_PLAYER : 
     return {...state, AddData: state.AddData.filter((_, i) => i !== action.payload),}
     case actions.SAVE_CONTACT_RESPONSE:

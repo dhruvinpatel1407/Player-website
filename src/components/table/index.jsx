@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import PropTypes from "prop-types";
 const Table = ({PlayerData}) => {
   // console.log(PlayerData);
  
@@ -32,6 +31,19 @@ const Table = ({PlayerData}) => {
       </table>
     </div>
   );
+};
+
+Table.propTypes = {
+  PlayerData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      name: PropTypes.string.isRequired,
+      role: PropTypes.string.isRequired,
+      teamName: PropTypes.string.isRequired,
+      battingStyle: PropTypes.string,
+      bowlingStyle: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default Table;

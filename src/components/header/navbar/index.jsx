@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -13,7 +13,7 @@ function Navbar() {
     { path: "/about", label: "About" },
     { path: "/contact-us", label: "Contact" },
     { path: "/popular-player", label: "Popular Players" },
-    { path: "/view-scores", label: "View Scores" },
+    { path: "/view-scores", label: "Scores Table" },
   ];
 
   const menuLinks = menuItems.map((item, index) => (
@@ -21,7 +21,7 @@ function Navbar() {
       <Link
         to={item.path}
         data-testid={`${item.label.toLowerCase()}-${isOpen ? "mobile" : "desktop"}`}
-        className="flex items-center justify-center text-xl hover:text-blue-600"
+        className="flex items-center justify-center my-1 text-xl hover:text-blue-600"
       >
         {item.label}
       </Link>
@@ -76,7 +76,7 @@ function Navbar() {
             id="mobile-menu"
             className={`${
               isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-            } transition transform absolute md:hidden top-16 left-0 w-full bg-white text-blue-900 px-4`}
+            } transition transform absolute md:hidden mt-4 py-4 top-16 right-2 bg-white text-blue-900 px-12 rounded-lg`}
           >
             {menuLinks}
           </ul>

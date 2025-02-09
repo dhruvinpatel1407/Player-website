@@ -1,4 +1,3 @@
-import React from "react";
 
 const About = () => {
   return (
@@ -27,7 +26,7 @@ const About = () => {
               <span className="text-black font-medium">Custom Leaderboards:</span> Create and view personalized leaderboards for your favorite players or teams.
             </li>
             <li>
-              <span className="text-black font-medium">Community Insights:</span> Share your reviews and rankings or see how others view a player's performance.
+              <span className="text-black font-medium">Community Insights:</span> Share your reviews and rankings or see how others view a player&rsquo;s performance.
             </li>
           </ul>
         </section>
@@ -36,7 +35,7 @@ const About = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
           <p className="text-gray-800 leading-relaxed">
-            We aim to bring sports enthusiasts closer to their favorite games by creating a platform that highlights the achievements of players worldwide. Whether it's a legendary athlete or an emerging talent, we believe every player deserves recognition.
+            We aim to bring sports enthusiasts closer to their favorite games by creating a platform that highlights the achievements of players worldwide. Whether it&rsquo;s a legendary athlete or an emerging talent, we believe every player deserves recognition.
           </p>
         </section>
 
@@ -44,7 +43,7 @@ const About = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">Join Us on the Journey</h2>
           <p className="text-gray-800 leading-relaxed">
-            Be part of our vibrant community of sports lovers. Explore player data, share your thoughts, and celebrate the passion for sports with fellow enthusiasts. Together, let’s honor the incredible world of sports!
+            Be part of our vibrant community of sports lovers. Explore player data, share your thoughts, and celebrate the passion for sports with fellow enthusiasts. Together, let&rsquo;s honor the incredible world of sports!
           </p>
         </section>
 

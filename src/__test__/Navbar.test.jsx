@@ -1,30 +1,10 @@
-import React from "react";
 import Navbar from "../components/header/navbar/index";
-import {render, cleanup, screen, fireEvent} from "@testing-library/react";
+import {render, cleanup, screen} from "@testing-library/react";
 import {afterEach, expect, it} from "vitest";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
-import {createMemoryHistory} from "history";
+import { MemoryRouter } from "react-router-dom";
+
 
 afterEach(cleanup);
-
-// const renderWithRouter = (component) => {
-//     const history = createMemoryHistory();
-
-//     return {
-//         ...render(<BrowserRouter>{component}</BrowserRouter>),
-//     }
-// }
-
-// it("should render player page", () => {
-//     const {container} = renderWithRouter(<Navbar />);
-    
-//     const navbar = screen.getByTestId("navbar");
-    
-//     const link = screen.getByTestId("about");
-    
-//     expect(navbar).toContainElement(link);
-
-// })
 
 it('should render the About link in the desktop menu', () => {
   render(
